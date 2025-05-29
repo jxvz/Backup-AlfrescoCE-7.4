@@ -9,7 +9,7 @@ Link do Repositorio: https://github.com/ambientelivre/alfresco-backup-linux
 Abaixo segue o tutorial da restauração
 Para realizar o backup é necessario alterar o script conforme sua configuração do Alfresco, e rodar ele na pasta de instalação do alfresco.
 
-Sinta-se a vontade para atualizar e aprimorar conforme sua necessidade.
+Sinta-se a vontade para atualizar e aprimorar conforme sua necessidade, o backup abrange o Database, Alfresco Data e Index do Solr.
 
 https://www.linkedin.com/in/jota7/
 
