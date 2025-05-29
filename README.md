@@ -10,18 +10,19 @@ Passo a Passo para Backup e Restauração do Alfresco Community 7.4
 Crie um diretório específico no NAS para armazenar os backups do Alfresco:
 ![image](https://github.com/user-attachments/assets/c5385303-d6c9-405a-843f-a25e046b09bc)
 
-🔗 2. Mapeamento do Volume NFS no Servidor Alfresco
-No servidor onde o Alfresco está instalado, edite o arquivo /etc/fstab para mapear o volume NFS:
-sudo nano /etc/fstab
+## 🔗 2. Mapeamento do Volume NFS no Servidor Alfresco
 
-Adicione a seguinte linha ao final do arquivo:
-IP_DO_NAS:/shares/Alfresco /mnt/alfresco-backups nfs defaults 0 0
+No servidor onde o Alfresco está instalado, edite o arquivo `/etc/fstab` para mapear o volume NFS:  
+`sudo nano /etc/fstab`
 
-Salve o arquivo e monte o volume com:
-sudo mount -a
+Adicione a seguinte linha ao final do arquivo:  
+`IP_DO_NAS:/shares/Alfresco /mnt/alfresco-backups nfs defaults 0 0`
 
-Verifique se o volume foi montado corretamente:
-df -h
+Salve o arquivo e monte o volume com:  
+`sudo mount -a`
+
+Verifique se o volume foi montado corretamente:  
+`df -h
 
 🧪 3. Teste de Backup
 a) Adicionando Arquivos para Teste
