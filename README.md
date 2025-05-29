@@ -1,12 +1,15 @@
 # Backup e Restauração do AlfrescoCE-7.4
 
-Passo a Passo para Backup e Restauração do Alfresco Community 7.4 - (Testado Apenas na Versão 7.4.1)
+Passo a Passo para Backup e Restauração do Alfresco Community 7.4 - (Testado Apenas na Versão Alfresco 7.4.1 Instalado em Docker)
 
 Agradeço ao Professor Marcio Junior Vieira por ter disponibilizado o primeiro script que usei como base para montar esse tutorial.
 
 Link do Repositorio: https://github.com/ambientelivre/alfresco-backup-linux
 
-Abaixo segue o tutorial da restauração, para realizar o backup é necessario alterar o script conforme sua configuração.
+Abaixo segue o tutorial da restauração
+Para realizar o backup é necessario alterar o script conforme sua configuração do Alfresco, e rodar ele na pasta de instalação do alfresco.
+
+Sinta-se a vontade para atualizar e aprimorar conforme sua necessidade.
 
 ---
 
