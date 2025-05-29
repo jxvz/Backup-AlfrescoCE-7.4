@@ -1,9 +1,13 @@
 # Backup-AlfrescoCE-7.4
-Passo a Passo para Backup e Restauração do Alfresco Community 7.4 (Testado Apenas na Versão 7.4.1)
 
-📁 1. Criação da Pasta de Backup no NAS
+Passo a Passo para Backup e Restauração do Alfresco Community 7.4  
+(Testado Apenas na Versão 7.4.1)
+
+---
+
+## 📁 1. Criação da Pasta de Backup no NAS
+
 Crie um diretório específico no NAS para armazenar os backups do Alfresco:
-/shares/Alfresco
 ![image](https://github.com/user-attachments/assets/c5385303-d6c9-405a-843f-a25e046b09bc)
 
 🔗 2. Mapeamento do Volume NFS no Servidor Alfresco
@@ -67,8 +71,10 @@ CREATE DATABASE alfresco OWNER alfresco ENCODING 'UTF8'; -- Cria banco zerado
 ♻️ 7. Restauração do Backup
 Execute o script de restauração, durante a execução, selecione a data do backup desejado para restauração:
 docker-compose down && bash restore_backup.sh
+![image](https://github.com/user-attachments/assets/03a9de50-bca0-42d3-b050-190b0d923d53)
 
-
+Você pode notar o log do script criando as tabelas, restaurando os módulos, índices Solr e Subindo os Containers.
+![image](https://github.com/user-attachments/assets/8c8d8889-b7aa-477a-9ef2-52a738afeb16)
 
 
 ✅ 8. Verificação
