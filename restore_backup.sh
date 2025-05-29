@@ -1,8 +1,6 @@
 #!/bin/bash
-
-# script-restore-alfresco.sh
 # Script para restaurar backup do Alfresco Community 7.4
-# Autor: João Vitor & ChatGPT :P
+# Autor: João Vitor
 
 BACKUP_DIR="/mnt/alfresco-backups"
 INSTALL_DIR="/opt/alfresco/docker-compose"
