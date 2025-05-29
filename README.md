@@ -24,7 +24,7 @@ Salve o arquivo e monte o volume com:
 Verifique se o volume foi montado corretamente:  
 `df -h`
 
-## 🧪 3. Teste de Backup
+## 🧪 3. Teste de Restauração de Backup
 
 a) Adicionando Arquivos para Teste
 
