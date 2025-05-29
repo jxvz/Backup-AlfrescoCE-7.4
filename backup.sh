@@ -1,7 +1,5 @@
 #!/bin/bash
-
-# Backup Script for Alfresco Community (adaptado)
-# Autor original: @ambientelivre | Adaptado por João Vitor & Ajuda do GPT :P
+# Autor original: @ambientelivre | Adaptado por João Vitor
 # Requisitos: acesso ao diretório /mnt/alfresco-backups já montado via NFS
 
 # Configurações
