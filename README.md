@@ -67,21 +67,25 @@ Suba apenas o serviço do PostgreSQL:
 ![image](https://github.com/user-attachments/assets/8c673301-1863-43ec-a425-c0def969373b)
 
 Acesse o container do PostgreSQL:
-docker exec -it nome_container_postgres psql -U alfresco
+
+`docker exec -it nome_container_postgres psql -U alfresco`
 ![image](https://github.com/user-attachments/assets/146bc9c6-3c8e-4dbf-8939-92da4781d653)
 
 No prompt do PostgreSQL:
-\l                      -- Lista os bancos
-\c postgres             -- Conecta-se ao banco postgres
-DROP DATABASE alfresco; -- Exclui o banco atual
-CREATE DATABASE alfresco OWNER alfresco ENCODING 'UTF8'; -- Cria banco zerado
-\q                      -- Sai do PostgreSQL
+
+`\l`                      – Lista os bancos  
+`\c postgres`             – Conecta-se ao banco postgres  
+`DROP DATABASE alfresco;` – Exclui o banco atual  
+`CREATE DATABASE alfresco OWNER alfresco ENCODING 'UTF8';` – Cria banco zerado  
+`\q`                      – Sai do PostgreSQL  
 ![image](https://github.com/user-attachments/assets/455a8300-7020-4e30-8930-50c9e04e24e5)
 
 
-♻️ 7. Restauração do Backup
+## ♻️ 7. Restauração do Backup
+
 Execute o script de restauração, durante a execução, selecione a data do backup desejado para restauração:
-docker-compose down && bash restore_backup.sh
+
+`docker-compose down && bash restore_backup.sh`
 ![image](https://github.com/user-attachments/assets/03a9de50-bca0-42d3-b050-190b0d923d53)
 
 Você pode notar o log do script criando as tabelas, restaurando os módulos, índices Solr e Subindo os Containers.
@@ -90,10 +94,14 @@ Você pode notar o log do script criando as tabelas, restaurando os módulos, í
 
 ✅ 8. Verificação
 Após a conclusão da restauração:
+![image](https://github.com/user-attachments/assets/be1ca147-eff2-4dac-b959-3c05a6fe150c)
 
-Acesse a interface do Alfresco Share
+Acesse a interface do Alfresco Share, faça o login com o usuário criado antes.
+![image](https://github.com/user-attachments/assets/53ee75fb-24bb-4ba2-a52c-df9a0075b3f4)
 
 Verifique se os arquivos inseridos anteriormente estão disponíveis
+![image](https://github.com/user-attachments/assets/44d7b67a-2f70-4978-b6b1-d1ad72fced12)
+
 
 
 
