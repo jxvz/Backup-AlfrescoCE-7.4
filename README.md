@@ -11,6 +11,8 @@ Para realizar o backup é necessario alterar o script conforme sua configuraçã
 
 Sinta-se a vontade para atualizar e aprimorar conforme sua necessidade.
 
+https://www.linkedin.com/in/jota7/
+
 ---
 
 ## 📁 1. Criação da Pasta de Backup no NAS
