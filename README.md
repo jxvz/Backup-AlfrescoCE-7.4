@@ -1,7 +1,12 @@
-# Backup-AlfrescoCE-7.4
+# Backup e Restauração do AlfrescoCE-7.4
 
-Passo a Passo para Backup e Restauração do Alfresco Community 7.4  
-(Testado Apenas na Versão 7.4.1)
+Passo a Passo para Backup e Restauração do Alfresco Community 7.4 - (Testado Apenas na Versão 7.4.1)
+
+Agradeço ao Professor Marcio Junior Vieira por ter disponibilizado o primeiro script que usei como base para montar esse tutorial.
+
+Link do Repositorio: https://github.com/ambientelivre/alfresco-backup-linux
+
+Abaixo segue o tutorial da restauração, para realizar o backup é necessario alterar o script conforme sua configuração.
 
 ---
 
@@ -24,13 +29,17 @@ Salve o arquivo e monte o volume com:
 Verifique se o volume foi montado corretamente:  
 `df -h`
 
+---
+
 ## 🧪 3. Teste de Restauração de Backup
 
 a) Adicionando Arquivos para Teste
 
-Crie um usuário e copie alguns arquivos de teste para o Alfresco (por exemplo, pela interface do Share) para garantir que haverá conteúdo a ser recuperado.  
+Crie um usuário e copie alguns arquivos de teste para o Alfresco (por exemplo, pela interface do Share) para garantir que haverá conteúdo a ser recuperado.
+
 Criei um usuário chamado `teste`.
 ![image](https://github.com/user-attachments/assets/2ce906db-306d-4589-86af-0e5c341f05d3)
+
 Adicionei as seguintes imagens nos arquivos compartilhados.
 ![image](https://github.com/user-attachments/assets/e97a4192-f56e-4bee-8756-148cccc892c8)
 
@@ -39,8 +48,10 @@ Adicionei as seguintes imagens nos arquivos compartilhados.
 Para simular um cenário de perda de dados:
 
 `docker-compose down`
+
 ![image](https://github.com/user-attachments/assets/936ea00c-0463-4c0f-868e-97460c0bbea2)
 
+---
 
 ## 🧹 5. Remover Dados Existentes
 
@@ -58,12 +69,14 @@ Remova o volume do PostgreSQL (substitua `nome_do_volume` pelo nome real):
 `docker volume rm nome_do_volume`
 ![image](https://github.com/user-attachments/assets/1ddf8d40-dc8a-47f6-b91a-037477d6c744)
 
+---
 
 ## 🐘 6. Subir o Container do PostgreSQL e Criar Banco Zerado
 
 Suba apenas o serviço do PostgreSQL:
 
 `docker-compose up -d postgres`
+
 ![image](https://github.com/user-attachments/assets/8c673301-1863-43ec-a425-c0def969373b)
 
 Acesse o container do PostgreSQL:
@@ -80,6 +93,7 @@ No prompt do PostgreSQL:
 `\q`                      – Sai do PostgreSQL  
 ![image](https://github.com/user-attachments/assets/455a8300-7020-4e30-8930-50c9e04e24e5)
 
+---
 
 ## ♻️ 7. Restauração do Backup
 
@@ -91,15 +105,17 @@ Execute o script de restauração, durante a execução, selecione a data do bac
 Você pode notar o log do script criando as tabelas, restaurando os módulos, índices Solr e Subindo os Containers.
 ![image](https://github.com/user-attachments/assets/8c8d8889-b7aa-477a-9ef2-52a738afeb16)
 
+---
 
 ✅ 8. Verificação
 Após a conclusão da restauração:
-![image](https://github.com/user-attachments/assets/be1ca147-eff2-4dac-b959-3c05a6fe150c)
 
 Acesse a interface do Alfresco Share, faça o login com o usuário criado antes.
+
 ![image](https://github.com/user-attachments/assets/53ee75fb-24bb-4ba2-a52c-df9a0075b3f4)
 
 Verifique se os arquivos inseridos anteriormente estão disponíveis
+
 ![image](https://github.com/user-attachments/assets/44d7b67a-2f70-4978-b6b1-d1ad72fced12)
 
 
